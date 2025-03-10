@@ -23,28 +23,37 @@ namespace MvvmSampleWPF.ViewModels.Windows
             new NavigationViewItem()
             {
                 Content = "Building Blocks",
-                Icon = new SymbolIcon { Symbol = SymbolRegular.Play24 },
+                Icon = new SymbolIcon { Symbol = SymbolRegular.TableSettings24 },
                 MenuItemsSource = new object[]
                 {
-                    new NavigationViewItem("ObservableObject", SymbolRegular.Play24, typeof(IntroductionPage)),
-                    new NavigationViewItem("ObservableValidator", SymbolRegular.Play24, typeof(IntroductionPage)),
-                    new NavigationViewItem("Inversion of control", SymbolRegular.Play24, typeof(IntroductionPage)),
-                    new NavigationViewItem("Collections", SymbolRegular.Play24, typeof(IntroductionPage))
+                    new NavigationViewItem(){
+                         Content = "Source generators",
+                Icon = new SymbolIcon { Symbol = SymbolRegular.ApprovalsApp20 },
+                MenuItemsSource = new object[]{
+                     new NavigationViewItem("[ObservableProperty]", SymbolRegular.Play24, typeof(IntroductionPage)),
+                    new NavigationViewItem("[RelayCommand]", SymbolRegular.VehicleShip24, typeof(IntroductionPage)),
+                    new NavigationViewItem("[INotifyPropertyChanged ]", SymbolRegular.ArrowSortDownLines16, typeof(IntroductionPage))
+                }
+                    },
+                    new NavigationViewItem("ObservableObject", SymbolRegular.Accessibility24, typeof(IntroductionPage)),
+                    new NavigationViewItem("ObservableValidator", SymbolRegular.ScanDash16, typeof(IntroductionPage)),
+                    new NavigationViewItem("Inversion of control", SymbolRegular.Tabs20, typeof(IntroductionPage)),
+                    new NavigationViewItem("Collections", SymbolRegular.SurfaceEarbuds24, typeof(IntroductionPage))
                 },
             },
             new NavigationViewItem()
             {
                 Content = "Putting things together",
-                Icon = new SymbolIcon { Symbol = SymbolRegular.Play24 },
+                Icon = new SymbolIcon { Symbol = SymbolRegular.Apps24 },
                 MenuItemsSource = new object[]
                 {
                     new NavigationViewItem("Setting up the viewmodels", SymbolRegular.Play24, typeof(IntroductionPage)),
                     new NavigationViewItem(){
-                        Content = "Putting things together",
+                        Content = "Creating a Service",
                 Icon = new SymbolIcon { Symbol = SymbolRegular.Play24 },
                 MenuItemsSource = new object[]{
-                    new NavigationViewItem("Building the settings service", SymbolRegular.Play24, typeof(IntroductionPage)),
-                    new NavigationViewItem("Building the Reddit service", SymbolRegular.Play24, typeof(IntroductionPage))
+                    new NavigationViewItem("Settings Service", SymbolRegular.Play24, typeof(IntroductionPage)),
+                    new NavigationViewItem("Reddit service", SymbolRegular.Play24, typeof(IntroductionPage))
                 }
                     },
                     new NavigationViewItem("Building the UI", SymbolRegular.Play24, typeof(IntroductionPage))
